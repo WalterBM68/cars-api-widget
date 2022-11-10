@@ -30,10 +30,10 @@ axios
 axios
 .get("http://api-tutor.herokuapp.com/v1/colors") 
 .then(result => {
-    const colors = result.data;
+    const color = result.data;
 
     colorElem.innerHTML = theColorTemplate({
-        colors
+        color
     });
 });
     
