@@ -14,6 +14,13 @@ const carsElem = document.querySelector('.cars');
 const colorElem = document.querySelector('.colors');
 //Element for brand
 const brandElem = document.querySelector('.brand');
+//Filtering Element
+const filterElem = document.querySelector('.filter');
+
+//Filtering
+carsElem.addEventListener('click', function(evt){
+
+});
 
 axios
 .get("https://api-tutor.herokuapp.com/v1/cars")
