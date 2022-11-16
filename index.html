@@ -34,6 +34,24 @@
         </tr>
         {{/each}}
     </script>
+
+    <!-- Filtering -->
+    <script class="filterByBrandTemplate" type="text/template-x">
+        {{#each theCarBrands}}
+        <tr>
+            <td>{{make}}     {{model}}</td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <!-- Filter by color -->
+    <script class="filterByColorTemplate" type="text/template-x">
+        {{#each theCarColor}}
+        <tr>
+            <td>{{model}}  =>    {{color}}</td>
+        </tr>
+        {{/each}}
+    </script>
     
     <script src="index.js" defer></script>
     
@@ -79,9 +97,88 @@
     </table>
 
     <h2>Filtering</h2>
-    <div class="filter">
+    <div class="dropdown">
+        <label for="cars">Filter cars API:</label>
+        <select name="cars" class="selectCars">
+            <option value="" >Choose</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Ford">Ford</option>
+            <option value="Blue" >Blue</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option value="White">White</option>
+            <option value="Grey">Grey</option>
+        </select>
+        <button class="filter">Filtering</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Filter cars</th>
+            </tr>
+        </thead>
+        <tbody class="theCars">
+            <!-- Put data from the API in here -->
+
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <title>Document</title>
+    
+    <script class="usersTemplate" type="text/template-x" >
+        {{#each users}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+            <td>{{username}}</td>
+            <td><button data-id="{{id}}" >Show posts</button></td>
+        </tr>
+        {{/each}}
+    </script>
+    
+    <script src="index.js" defer></script>
+
+</head>
+<body>
+
+    <h1>User API app</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Full name</th>
+                <th>Email</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody class="users">
+           
+
+        </tbody>
+    </table>
+
+    <h2>Posts</h2>
+    <div class="posts">
 
     </div>
 
 </body>
-</html>
+</html> -->
